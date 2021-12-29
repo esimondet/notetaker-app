@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { createNewNote, validateNote } = require('../../lib/notes');
-const { notes } = require('../../db/db.json');
+const { notesArray } = require('../../db/db.json');
 
 router.get('/notes', (req, res) => {
-    res.json(notes);
+    res.json(notesArray);
 });
 
 router.post('/notes', (req, res) => {
